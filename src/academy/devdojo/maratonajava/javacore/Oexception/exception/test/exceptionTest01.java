@@ -14,6 +14,7 @@ public class exceptionTest01 {
             boolean iscriado = file.createNewFile();
             System.out.println("arquivo criado "+iscriado);
 
+
         }catch (IOException e){
             System.out.println("Erro ao tentar criar arquivo");
         }
