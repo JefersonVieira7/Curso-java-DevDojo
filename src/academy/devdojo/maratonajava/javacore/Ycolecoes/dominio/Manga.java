@@ -31,15 +31,6 @@ public class Manga implements Comparable<Manga>{
         return Objects.hash(id, nome, preço);
     }
 
-    @Override
-    public String toString() {
-        return "Manga{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", preço=" + preço +
-                ", quantidade=" + quantidade +
-                '}';
-    }
 
     public Long getId() {
         return id;
@@ -76,6 +67,16 @@ public class Manga implements Comparable<Manga>{
     @Override
     public int compareTo(Manga outroManga) {
         return this.nome.compareTo(outroManga.getNome());
+    }
+
+    @Override
+    public String toString() {
+        return "Manga{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", preço=" + preço +
+                ", quantidade=" + quantidade +
+                '}';
     }
 }
 
