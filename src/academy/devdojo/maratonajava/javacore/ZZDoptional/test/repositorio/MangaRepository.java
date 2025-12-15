@@ -2,11 +2,12 @@ package academy.devdojo.maratonajava.javacore.ZZDoptional.test.repositorio;
 
 import academy.devdojo.maratonajava.javacore.ZZDoptional.test.Manga;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class MangaRepository {
     private static List<Manga> mangas = List.of(new Manga(1, "Boku no Hero", 50), new Manga(2, "OverLord", 25));
+
+   // private static Set<Manga> mangasOrdenados = new TreeSet<>(mangas);
 
     public static Optional<Manga> findById(Integer id){
         Manga found = null;

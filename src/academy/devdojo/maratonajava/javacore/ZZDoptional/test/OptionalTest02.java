@@ -2,8 +2,6 @@ package academy.devdojo.maratonajava.javacore.ZZDoptional.test;
 
 import academy.devdojo.maratonajava.javacore.ZZDoptional.test.repositorio.MangaRepository;
 
-
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class OptionalTest02 {
@@ -20,6 +18,5 @@ public class OptionalTest02 {
         Manga newManga = MangaRepository.findByName("Drifters")
                 .orElse(new Manga(3, "Drifters", 70));
 
-        System.out.println(newManga);
     }
 }
