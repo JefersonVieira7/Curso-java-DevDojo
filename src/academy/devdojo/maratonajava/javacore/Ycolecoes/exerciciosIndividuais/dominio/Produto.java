@@ -1,7 +1,4 @@
 package academy.devdojo.maratonajava.javacore.Ycolecoes.exerciciosIndividuais.dominio;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Produto implements Comparable<Produto>{
@@ -16,9 +13,10 @@ public class Produto implements Comparable<Produto>{
         this.quantidade = quantidade;
     }
 
+
     @Override
     public int compareTo(Produto o) {
-        return this.nome.compareToIgnoreCase(o.nome);
+        return this.nome.compareToIgnoreCase(o.getNome());
     }
 
     @Override
