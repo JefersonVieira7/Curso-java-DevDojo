@@ -1,11 +1,9 @@
 package academy.devdojo.maratonajava.javacore.ZZEstream.test;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
+
 
 public class TestAleatory01 {
     public static List<String> nomes = new ArrayList<>(List.of(
@@ -22,10 +20,12 @@ public class TestAleatory01 {
     ));
 
     public static void main(String[] args) {
-        System.out.println("Pessoas com idade menor ou igual a 18 anos:");
-        pessoas.stream()
-                .filter(pessoa -> pessoa.getIdade() <= 18)
-                .sorted(Comparator.comparing(Pessoa::getIdade))
-                .forEach(pessoa -> System.out.println(pessoa.getName()));
+        List<String> palavras = Arrays.asList("java", "python", "java", "c++", "java", "ruby");
+        List<String> listaUnica = palavras.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println("Lista sem duplicatas: "+listaUnica);
+
     }
 }
