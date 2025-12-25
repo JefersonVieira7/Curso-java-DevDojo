@@ -16,8 +16,8 @@ public class ClassesGenericasTest03 {
 
         RentalService<Carro> rentalService = new RentalService<>(carrosDisponíveis);
         Carro carro = rentalService.buscarObjetoDisponível();
-        //System.out.println("Usando o carro por um mês......");
-       // rentalService.retornarCarroAlugado(carro);
+        System.out.println("Usando o carro por um mês......");
+        rentalService.retornarCarroAlugado(carro);
 
     }
 }
