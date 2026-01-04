@@ -8,8 +8,8 @@ public class LambdaTest02 {
     public static void main(String[] args) {
         List<String> names = List.of("Jeferson", "jefinho");
 
-        List<Integer> inteiros = map(names, name -> name.length());
-        List<String> toUpperCase = map(names, name -> name.toUpperCase());
+        List<Integer> inteiros = map(names, String::length);
+        List<String> toUpperCase = map(names, String::toUpperCase);
         System.out.println(inteiros);
         System.out.println(toUpperCase);
 
